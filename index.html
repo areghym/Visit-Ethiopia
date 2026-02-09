@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visit Ethiopia+ | Cultural Tourism Portal</title>
+    <title>Visit Ethiopia+ | Official Tourism Portal</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -29,10 +29,10 @@
         }
 
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=1920');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=2071&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            height: 70vh;
+            height: 75vh;
             display: flex;
             align-items: center;
             color: white;
@@ -91,7 +91,7 @@
             width: 100%;
         }
 
-        .section-padding { padding: 60px 0; }
+        .section-padding { padding: 80px 0; }
         
         #ethiopian-clock {
             background: var(--eth-dark);
@@ -100,6 +100,23 @@
             border-radius: 15px;
             font-weight: bold;
             box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .converter-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 2px solid #eee;
+            transition: 0.3s;
+        }
+
+        .converter-card:hover {
+            border-color: var(--eth-green);
+        }
+
+        .team-member {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -116,11 +133,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('food')">Cuisines</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('hotels')">Hotels</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('language')">Language</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('calendar')">Calendar</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('food')">Food</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('hotels')">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('language')">Language</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('calendar')">Calendar</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -133,12 +160,13 @@
         <section id="section-home" class="view-section">
             <div class="hero-section">
                 <div class="container">
-                    <h1 class="display-3 fw-bold mb-4">Land of Origins</h1>
-                    <p class="lead mb-5 fs-4">Discover the authentic flavors and majestic stays of Ethiopia.</p>
+                    <h1 class="display-3 fw-bold mb-2">Land of Origins</h1>
+                    <h2 class="h4 mb-4 opacity-75">Ethiopia: 13 Months of Sunshine</h2>
+                    <p class="lead mb-5 fs-4">Experience the cradle of humanity and its diverse cultural heritage.</p>
                     <div class="row justify-content-center">
                         <div class="col-md-6">
                             <div class="input-group mb-3 shadow">
-                                <input type="text" class="form-control form-control-lg border-0" placeholder="Find spicy Doro Wot or Luxury Hotels...">
+                                <input type="text" class="form-control form-control-lg border-0" placeholder="Search destinations...">
                                 <button class="btn btn-eth px-4" type="button"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
@@ -152,28 +180,28 @@
                         <div class="card card-custom p-4 h-100" onclick="showSection('food')" style="cursor:pointer">
                             <i class="fas fa-utensils fa-3x mb-3 text-success"></i>
                             <h4 class="fw-bold">Traditional Food</h4>
-                            <p class="small text-muted">Doro Wot, Kitfo, and Beyaynetu</p>
+                            <p class="small text-muted">Authentic Cuisines</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="card card-custom p-4 h-100" onclick="showSection('hotels')" style="cursor:pointer">
                             <i class="fas fa-hotel fa-3x mb-3 text-primary"></i>
-                            <h4 class="fw-bold">Luxury Stays</h4>
-                            <p class="small text-muted">Sheraton, Skylight & Resorts</p>
+                            <h4 class="fw-bold">Hotels & Lodges</h4>
+                            <p class="small text-muted">World-Class Stays</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="card card-custom p-4 h-100" onclick="showSection('calendar')" style="cursor:pointer">
                             <i class="fas fa-calendar-check fa-3x mb-3 text-warning"></i>
                             <h4 class="fw-bold">Culture</h4>
-                            <p class="small text-muted">13 Months of Sunshine</p>
+                            <p class="small text-muted">Unique Heritage</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="card card-custom p-4 h-100" onclick="showSection('language')" style="cursor:pointer">
                             <i class="fas fa-comments fa-3x mb-3 text-danger"></i>
                             <h4 class="fw-bold">Language</h4>
-                            <p class="small text-muted">Speak like a Local</p>
+                            <p class="small text-muted">Communication Guide</p>
                         </div>
                     </div>
                 </div>
@@ -184,8 +212,8 @@
         <section id="section-food" class="view-section d-none section-padding">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bold">Ethiopian Cuisines</h2>
-                    <p class="text-muted">Authentic traditional dishes served with love and Injera</p>
+                    <h2 class="display-5 fw-bold">Ethiopian Cuisine</h2>
+                    <h4 class="text-muted">Authentic Local Dining</h4>
                 </div>
                 <div class="row g-4" id="food-list">
                     <!-- Dynamic Food Cards -->
@@ -197,8 +225,8 @@
         <section id="section-hotels" class="view-section d-none section-padding">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bold">Premier Hotels & Lodges</h2>
-                    <p class="text-muted">Experience world-class hospitality in the heart of Africa</p>
+                    <h2 class="display-5 fw-bold">Hotels & Lodges</h2>
+                    <h4 class="text-muted">Explore Luxury and Nature</h4>
                 </div>
                 <div class="row g-4" id="hotels-list">
                     <!-- Dynamic Hotels Cards -->
@@ -211,7 +239,8 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <h2 class="text-center fw-bold mb-5">Amharic for Tourists</h2>
+                        <h2 class="text-center fw-bold mb-2">Language Assistance</h2>
+                        <h4 class="text-center text-muted mb-5">Common Phrases and Translations</h4>
                         <div id="phrase-list" class="shadow-sm rounded bg-white p-4">
                             <!-- Phrases loaded here -->
                         </div>
@@ -223,25 +252,53 @@
         <!-- CALENDAR MODULE -->
         <section id="section-calendar" class="view-section d-none section-padding">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">Time & Calendar</h2>
+                    <h4 class="text-muted">Unique Ethiopian Timekeeping</h4>
+                </div>
+                <div class="row align-items-start">
                     <div class="col-md-6 mb-4">
-                        <div class="p-5 bg-white shadow-lg rounded-4">
-                            <h3 class="fw-bold mb-4">The 13-Month Calendar</h3>
+                        <div class="p-5 bg-white shadow-lg rounded-4 h-100">
+                            <h3 class="fw-bold mb-4">13 Months of Sunshine</h3>
+                            <h5 class="text-muted mb-4">The Ethiopian Calendar</h5>
                             <div id="ethiopian-clock" class="text-center mb-4">
                                 <div id="eth-date" class="h3">...</div>
                                 <div class="small opacity-75">Ethiopian Calendar (EC)</div>
                             </div>
-                            <p class="lead">Ethiopia follows its own ancient solar calendar, currently 7 years behind the Western world.</p>
+                            <p class="lead">Ethiopia follows its own ancient solar calendar which is 7-8 years behind the Gregorian one.</p>
                             <hr>
-                            <h5 class="fw-bold"><i class="fas fa-bullhorn me-2 text-danger"></i>Upcoming Festivals</h5>
-                            <div class="list-group list-group-flush mt-3">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-bullhorn me-2 text-danger"></i>Major Festivals</h5>
+                            <div class="list-group list-group-flush">
                                 <div class="list-group-item d-flex justify-content-between"><span>Genna (Christmas)</span><span class="badge bg-success">Jan 7</span></div>
                                 <div class="list-group-item d-flex justify-content-between"><span>Timket (Epiphany)</span><span class="badge bg-primary">Jan 19</span></div>
+                                <div class="list-group-item d-flex justify-content-between"><span>Meskel (Finding of Cross)</span><span class="badge bg-warning">Sept 27</span></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded-4 shadow" alt="Landscape">
+                    
+                    <!-- CONVERTER TOOL -->
+                    <div class="col-md-6 mb-4">
+                        <div class="converter-card p-5 h-100">
+                            <h3 class="fw-bold mb-4">Date Converter</h3>
+                            <h5 class="text-muted mb-4 text-uppercase small letter-spacing">Gregorian to Ethiopian</h5>
+                            
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Gregorian Date (Standard)</label>
+                                <input type="date" id="greg-input" class="form-control form-control-lg mb-3" onchange="convertDate()">
+                            </div>
+                            
+                            <div class="p-4 rounded-3 border bg-light text-center">
+                                <p class="small text-muted mb-1">Ethiopian Equivalent:</p>
+                                <h4 id="eth-result" class="fw-bold text-success">Select a date above</h4>
+                                <p id="eth-month-desc" class="small text-muted mb-0"></p>
+                            </div>
+
+                            <div class="mt-4">
+                                <div class="alert alert-info py-2 small">
+                                    <i class="fas fa-info-circle me-2"></i> New Year in Ethiopia starts on Sept 11 (Sept 12 in leap years).
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -250,10 +307,21 @@
     </main>
 
     <footer class="bg-dark text-white py-5 mt-5">
-        <div class="container text-center">
-            <h4 class="fw-bold mb-3">Visit Ethiopia+</h4>
-            <p class="text-muted">Your digital gateway to the Land of Origins.</p>
-            <div class="mt-4 border-top pt-3 opacity-50 small">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-4">
+                    <h4 class="fw-bold mb-3">Visit Ethiopia+</h4>
+                    <p class="text-muted">Explore the rich history, landscapes, and hospitality of the Land of Origins.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mb-4">
+                    <h5 class="fw-bold mb-3" style="color: var(--eth-yellow);">Team Members</h5>
+                    <div class="team-member">2. YODIT MOGES</div>
+                    <div class="team-member">3. SOLOMON ABEBE</div>
+                    <div class="team-member">4. ABRHAM SOLOMON</div>
+                    <div class="team-member">5. MOHAMED DEGAGA</div>
+                </div>
+            </div>
+            <div class="mt-4 border-top pt-3 opacity-50 small text-center">
                 © 2026 Visit Ethiopia+ Tourism Portal. All Rights Reserved.
             </div>
         </div>
@@ -262,31 +330,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const foods = [
-            { id: 1, name: 'Beyaynetu', region: 'National', desc: 'A vibrant platter of various vegan stews like lentil, cabbage, and beetroot served atop Injera.', img: '1.jpg' },
-            { id: 2, name: 'Doro Wot', region: 'Highlands', desc: 'Slow-cooked spicy chicken stew with hard-boiled eggs, rich in Berbere and clarified butter.', img: '2.jpg' },
-            { id: 3, name: 'Kitfo', region: 'Gurage', desc: 'Finely minced lean beef, seasoned with mitmita and niter kibbeh, served with Gomen (collard greens) and Ayibe.', img: '3.jpg' },
-            { id: 4, name: 'Shiro', region: 'National', desc: 'A thick, savory chickpea stew prepared in a traditional clay pot (Manchet) with spices.', img: '4.jpg' },
-            { id: 5, name: 'Tibs', region: 'National', desc: 'Sliced beef or lamb sautéed with garlic, onions, and rosemary, served sizzling in a clay charcoal stove.', img: '5.jpg' }
+            { id: 1, name: 'Beyaynetu', region: 'National', desc: 'A colorful platter of vegan stews served on Injera.', img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=400&auto=format&fit=crop' },
+            { id: 2, name: 'Doro Wot', region: 'Highlands', desc: 'Spicy chicken stew, often considered the national dish of Ethiopia.', img: 'https://images.unsplash.com/photo-1541518763669-279f00ed02ae?q=80&w=400&auto=format&fit=crop' },
+            { id: 3, name: 'Kitfo', region: 'Gurage', desc: 'Minced beef with chili powder (mitmita) and clarified butter (niter kibbeh).', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=400&auto=format&fit=crop' },
+            { id: 4, name: 'Ethiopian Coffee', region: 'National', desc: 'A ceremonial tradition serving world-renowned Arabica beans.', img: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=400&auto=format&fit=crop' }
         ];
 
         const hotels = [
-            { id: 1, name: 'Sheraton Addis', location: 'Addis Ababa', type: 'Luxury', rating: 5, img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=400' },
-            { id: 2, name: 'Skylight Hotel', location: 'Bole, Addis Ababa', type: 'Business Luxury', rating: 5, img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=400' },
-            { id: 3, name: 'Kuriftu Resort', location: 'Bishoftu / Lake Tana', type: 'Spa Resort', rating: 4, img: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=400' },
-            { id: 4, name: 'Limalimo Lodge', location: 'Simien Mountains', type: 'Eco-Luxury', rating: 5, img: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80&w=400' },
-            { id: 5, name: 'Haile Resort', location: 'Hawassa / Arba Minch', type: 'Lakefront Resort', rating: 4, img: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&q=80&w=400' },
-            { id: 6, name: 'Gondar Hills', location: 'Gondar', type: 'Boutique Lodge', rating: 4, img: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=400' },
-            { id: 7, name: 'Hyatt Regency', location: 'Meskel Square', type: 'Modern Luxury', rating: 5, img: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=400' },
-            { id: 8, name: 'Bale Mountain Lodge', location: 'Bale Mountains', type: 'Wilderness Lodge', rating: 5, img: 'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&q=80&w=400' }
+            { id: 1, name: 'Sheraton Addis', location: 'Addis Ababa', type: 'Luxury Resort', rating: 5, img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400&auto=format&fit=crop' },
+            { id: 2, name: 'Skylight Hotel', location: 'Addis Ababa', type: 'Modern Business', rating: 5, img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=400&auto=format&fit=crop' },
+            { id: 3, name: 'Gondar Hills', location: 'Gondar', type: 'Boutique Eco-Resort', rating: 4, img: 'https://images.unsplash.com/photo-1561501900-3701fa6a0864?q=80&w=400&auto=format&fit=crop' },
+            { id: 4, name: 'Haile Resort', location: 'Hawassa', type: 'Lakefront Resort', rating: 4, img: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=400&auto=format&fit=crop' }
         ];
 
         const phrases = [
-            { en: 'Welcome', am: 'Enkwan Dehna Metu (እንኳን ደህና መጡ)' },
-            { en: 'Thank you', am: 'Ameseginalehu (አመሰግናለሁ)' },
-            { en: 'I am full', am: 'Tegibyalew (ጠግቤያለሁ)' },
-            { en: 'Beautiful', am: 'Konjo (ቆንጆ)' },
-            { en: 'I am thirsty', am: 'Temahu (ጠማሁ)' },
-            { en: 'Where is the hotel?', am: 'Hotelu yet no? (ሆቴሉ የት ነው?)' }
+            { am: 'Selam (ሰላም)', en: 'Hello / Peace' },
+            { am: 'Ameseginalehu (አመሰግናለሁ)', en: 'Thank you' },
+            { am: 'Megebu tefatch nehu', en: 'This food is delicious' },
+            { am: 'Hotelu yet no?', en: 'Where is the hotel?' },
+            { am: 'Sint nehu?', en: 'How much is it?' }
         ];
 
         function showSection(id) {
@@ -296,16 +358,37 @@
             window.scrollTo(0, 0);
         }
 
+        function convertDate() {
+            const input = document.getElementById('greg-input').value;
+            if (!input) return;
+            
+            const date = new Date(input);
+            const monthNames = ["Meskerem", "Tikimt", "Hidar", "Tahsas", "Tir", "Yakatit", "Magabit", "Miyazia", "Ginbot", "Sene", "Hamle", "Nehasse", "Pagume"];
+            
+            let ethYear = date.getFullYear() - 8;
+            let startOfEthYear = new Date(date.getFullYear(), 8, 11);
+            if (date >= startOfEthYear) {
+                ethYear++;
+            }
+
+            const diffDays = Math.floor((date - new Date(date.getFullYear(), 0, 1)) / (1000 * 60 * 60 * 24));
+            const ethMonthIndex = (Math.floor(diffDays / 30) + 4) % 13;
+            const ethDay = (diffDays % 30) + 1;
+
+            document.getElementById('eth-result').innerText = `${monthNames[ethMonthIndex]} ${ethDay}, ${ethYear} EC`;
+            document.getElementById('eth-month-desc').innerText = `Calculated for the Ethiopian Month: ${monthNames[ethMonthIndex]}`;
+        }
+
         function init() {
             document.getElementById('food-list').innerHTML = foods.map(f => `
                 <div class="col-md-4 mb-4">
                     <div class="card card-custom h-100">
-                        <img src="${f.img}" class="img-card-top" alt="${f.name}" onerror="this.src='https://via.placeholder.com/400x220?text=${f.name}'">
+                        <img src="${f.img}" class="img-card-top" alt="${f.name}">
                         <div class="card-body">
                             <span class="cultural-badge mb-2 d-inline-block">${f.region}</span>
                             <h5 class="fw-bold">${f.name}</h5>
                             <p class="small text-muted mb-3">${f.desc}</p>
-                            <button class="btn btn-sm btn-outline-success w-100">Recommended Vendors</button>
+                            <button class="btn btn-sm btn-outline-success w-100">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -321,8 +404,8 @@
                             </div>
                             <h6 class="fw-bold mb-0">${h.name}</h6>
                             <p class="text-success small mb-2">${h.type}</p>
-                            <p class="text-muted x-small mb-3" style="font-size: 0.75rem;"><i class="fas fa-map-marker-alt me-1 text-danger"></i>${h.location}</p>
-                            <button class="btn btn-sm btn-eth w-100">Book Stay</button>
+                            <p class="text-muted small mb-3"><i class="fas fa-map-marker-alt me-1 text-danger"></i>${h.location}</p>
+                            <button class="btn btn-sm btn-eth w-100">Book Now</button>
                         </div>
                     </div>
                 </div>
@@ -331,14 +414,17 @@
             document.getElementById('phrase-list').innerHTML = phrases.map(p => `
                 <div class="card phrase-card p-3 mb-3 d-flex flex-row justify-content-between align-items-center" onclick="speak('${p.en}')">
                     <div>
-                        <h6 class="mb-1 fw-bold">${p.en}</h6>
-                        <span class="text-muted small">${p.am}</span>
+                        <h6 class="mb-1 fw-bold text-success">${p.am}</h6>
+                        <span class="text-muted d-block small">${p.en}</span>
                     </div>
                     <i class="fas fa-volume-up text-success fs-5"></i>
                 </div>
             `).join('');
 
             updateEthCalendar();
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('greg-input').value = today;
+            convertDate();
         }
 
         function updateEthCalendar() {
